@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">org.hsqldb.jdbcDriver</property>
+        <property name="hibernate.connection.url">jdbc:hsqldb:hsql://localhost/xdb</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password"></property>
+
+        <!--<property name="hibernate.connection.pool_size">1</property>-->
+        <property name="hibernate.dialect">org.hibernate.dialect.HSQLDialect</property>
+        <property name="current_session_context_class">thread</property>
+        <property name="hibernate.jdbc.batch_size">100</property>
+        <!--<property name="hibernate.cache.provider_class">org.hibernate.cache</property>-->
+        <property name="show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.use_sql_comments">true</property>
+        <property name="hbm2ddl.auto">update</property>
+
+        <!--<property name="hibernate.cache.use_query_cache" value="true"/>-->
+
+        <!--<mapping class="ru.roseurobank.persistentcontext.Category"/>-->
+        <!--<mapping resource="ru/roseurobank/inheritance/Event.hbm.xml"/>-->
+        <!--<mapping resource="ru/roseurobank/inheritance/Person.tablePerSubclass.hbm.xml"/>-->
+        <!--<mapping resource="ru/roseurobank/inheritance/Person.tablePerClassHierarchy.hbm.xml"/>-->
+
+        <!--    <mapping class="ru.roseurobank.inheritance.Person" />
+        <mapping class="ru.roseurobank.inheritance.Employee" />
+        <mapping class="ru.roseurobank.inheritance.Owner" />-->
+
+        <!--        <mapping class="ru.roseurobank.inheritance.BillingDetailsTPS" />
+        <mapping class="ru.roseurobank.inheritance.BankAccountTPS" />
+        <mapping class="ru.roseurobank.inheritance.CreditCardTPS" />        -->
+
+        <!--<mapping class="ru.roseurobank.inheritance.Users" />-->
+        <!--<mapping class="ru.roseurobank.inheritance.Role" />-->
+
+        <!--        <mapping class="ru.roseurobank.inheritance.BillingDetailsTPCH" />
+        <mapping class="ru.roseurobank.inheritance.BankAccountTPCH" />
+        <mapping class="ru.roseurobank.inheritance.CreditCardTPCH" />-->
+
+        <!--        <mapping class="ru.roseurobank.inheritance.BillingDetailsTPCCwithU" />
+        <mapping class="ru.roseurobank.inheritance.BankAccountTPCCwithU" />
+        <mapping class="ru.roseurobank.inheritance.CreditCardTPCCwithU" />-->
+
+        <!--        <mapping class="ru.roseurobank.inheritance.BillingDetailsTPCCwithIP" />
+        <mapping class="ru.roseurobank.inheritance.BankAccountTPCCwithIP" />
+        <mapping class="ru.roseurobank.inheritance.CreditCardTPCCwithIP" />-->
+
+        <!--        <mapping class="ru.roseurobank.inheritance.BillingDetailsMix" />
+        <mapping class="ru.roseurobank.inheritance.BankAccountMix" />
+        <mapping class="ru.roseurobank.inheritance.CreditCardMix" />-->
+
+        <!--        <mapping class="ru.roseurobank.collections.OrderSet" />
+                <mapping class="ru.roseurobank.collections.CustomerSet" />-->
+
+        <!--        <mapping class="ru.roseurobank.collections.CustomerComponent" />
+                <mapping class="ru.roseurobank.collections.Address" />-->
+
+        <!--        <mapping class="ru.roseurobank.collections.CustomerOTO" />
+                <mapping class="ru.roseurobank.collections.AddressOTO" />-->
+
+        <!--        <mapping class="ru.roseurobank.collections.CustomerMTM" />
+                <mapping class="ru.roseurobank.collections.AddressMTM" />-->
+
+        <!--        <mapping class="ru.roseurobank.concurrency.User" />-->
+        <mapping class="ru.roseurobank.hqlfetch.User" />
+        <mapping class="ru.roseurobank.hqlfetch.Role" />
+    </session-factory>
+</hibernate-configuration>
